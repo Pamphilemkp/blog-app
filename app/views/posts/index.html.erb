@@ -1,1 +1,28 @@
-<h1>Welcome, here are different posts: </h1>
+
+   <div class="photo">
+        <%= render partial: "/users/profile", locals: {user: @user.photo} %>
+    </div>
+    
+    <div class="name-block">
+        <h4> <%= @user.name %> </h4>
+        <p>Number of posts: <%= @user.posts_counter %></p>
+     </div>
+
+     <div>
+        <% @posts.each do |post| %>
+            <p> <%= post.title %> </p>
+            <p> <%= post.text %> </p>
+            <p> Comments: <%= post.comments_counter %> </p>
+            <p> Likes: <%= post.likes_counter %> </p>
+        
+       <% if post.comments.length > 0 %>
+          <% post.five_most_recent_comments.each do |comment| %>
+           <p> <%= User.find(comment.author_id).name %> :
+               <%= comment.text %>
+            </p>
+          <% end %>
+        <% end %>
+      </div>
+      
+      <button> <%=link_to "Pagination", "posts/#{post.id}" %> </button>
+     <% end %>
