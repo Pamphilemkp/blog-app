@@ -22,7 +22,8 @@
                 <span> Likes: <%= post.likes_counter %> </span>
              </p>
          <% end %>
-         
+         <br/>
+         <button> <%= link_to "New post", "#{@user.id}/posts/new" %> </button> 
          <button> <%= link_to "See all posts", "#{@user.id}/posts" %> </button>
    </div>
 
