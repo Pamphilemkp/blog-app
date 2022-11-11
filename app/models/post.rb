@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
 
+  after_initialize :initial
   after_save :update_user_post_counter
 
   validates :title, presence: true, allow_blank: false, length: { maximum: 250 }
@@ -15,5 +16,12 @@ class Post < ApplicationRecord
 
   def update_user_post_counter
     author.increment!(:posts_counter)
+  end
+
+  private
+
+  def initial
+    self.comments_counter ||= 0
+    self.likes_counter ||= 0
   end
 end

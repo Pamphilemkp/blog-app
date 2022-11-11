@@ -1,6 +1,18 @@
-<h1>Hello, welcome to the blog </h1>
 
-<p> <%= @user.id %> </p>
-<p> <%= @user.name %> </p>
-<p> <%= @user.bio %> </p>
-<p> <%= @user.photo %> </p>
+<div> 
+    <% @users.each do |user| %>
+      <div>
+        <div class="photo">
+            <%= render partial: "users/profile", locals: {user: user.photo} %>
+        </div>
+
+        <div class="photo">
+           <h4> <%= user.name %> </h4>
+           <p>Number of posts: <%= user.posts_counter %></p>
+        </div>
+
+        <p><%= link_to "See more about #{user.name}", user_path(user) %></p>
+      </div>
+    <% end %>
+       
+</div>

@@ -1,1 +1,22 @@
-<h1>Here is the post place</h1>
+<div>
+    <h4> Post #<%= @post.id%>  By <%= @user.name %> </h4>
+    <p>
+       Comments: <%= @post.comments_counter %>    
+       Likes: <%= @post.likes_counter %>
+    </p>
+</div>
+
+<div>
+   <h5>Post: <%= @post.title %> </h5>
+   <p>Text: <%= @post.text %> </p>
+</div>
+
+<div>
+
+<h5> Comments </h5>
+
+<% @post.comments.each do |comment| %>
+    <p> <%= User.find(comment.author_id).name %> : 
+     <%= comment.text %> </p>
+     <% end %>
+</div>
