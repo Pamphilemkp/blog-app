@@ -9,5 +9,12 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :new, :create]
   end
+
+  
+  # Add comment to a post
+  post 'users/:user_id/posts/:id/', to: 'posts#comment_post', as: 'comment_post'
+
+  # Like a post
+  post '/users/:user_id/posts/:id/like', to: 'posts#like_post', as: 'likes'
 end
 

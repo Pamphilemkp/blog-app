@@ -12,11 +12,24 @@
 </div>
 
 <div>
+<%= form_with model: @comment, url: user_post_path, class: 'form-group', scope: :form_comment  do |form| %>
+   <%= form.text_area :text, class: 'form-control' %>
+  <div>
+       <%= form.submit 'Add comment' %>
+  </div>
+<% end %> <br/>
 
-<h5> Comments </h5>
+<div>
+<%= form_with model: @like, url: likes_path, class: 'form-group' do |form| %>
+     <%= form.submit 'Like' %>
+<% end %>
+</div>
 
-<% @post.comments.each do |comment| %>
-    <p> <%= User.find(comment.author_id).name %> : 
-     <%= comment.text %> </p>
-     <% end %>
+<div>
+   <h5> Comments </h5>
+
+   <% @post.comments.each do |comment| %>
+      <p> <%= User.find(comment.author_id).name %> : 
+      <%= comment.text %> </p>
+      <% end %>
 </div>

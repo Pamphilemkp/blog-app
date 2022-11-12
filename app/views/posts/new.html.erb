@@ -1,11 +1,6 @@
 <h2> Create new post </h2>
 
-<p> <% if @post.errors.any? %>
-    <% @post.errors.full_messages.each do |message| %>
-       <p>  <%= message %> </p>
-       <% end %>
-    <% end %>
-
+<p> 
 <%= form_with model: @post, url:  user_posts_url, method: :post, local: true do |f|  %>
     <%= f.label :title %> </br> 
     <%= f.text_field :title %> </br> </br>
