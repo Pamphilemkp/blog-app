@@ -11,12 +11,14 @@
    <p>Text: <%= @post.text %> </p>
 </div>
 
+<%= render partial: "likes/create" %>
+<%= render partial: "comments/create" %>
+
 <div>
+   <h5> Comments </h5>
 
-<h5> Comments </h5>
-
-<% @post.comments.each do |comment| %>
-    <p> <%= User.find(comment.author_id).name %> : 
-     <%= comment.text %> </p>
-     <% end %>
+   <% @post.comments.each do |comment| %>
+      <p> <%= User.find(comment.author_id).name %> : 
+      <%= comment.text %> </p>
+      <% end %>
 </div>
