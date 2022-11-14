@@ -11,19 +11,8 @@
    <p>Text: <%= @post.text %> </p>
 </div>
 
-<div>
-<%= form_with model: @comment, url: user_post_path, class: 'form-group', scope: :form_comment  do |form| %>
-   <%= form.text_area :text, class: 'form-control' %>
-  <div>
-       <%= form.submit 'Add comment' %>
-  </div>
-<% end %> <br/>
-
-<div>
-<%= form_with model: @like, url: likes_path, class: 'form-group' do |form| %>
-     <%= form.submit 'Like' %>
-<% end %>
-</div>
+<%= render partial: "likes/create" %>
+<%= render partial: "comments/create" %>
 
 <div>
    <h5> Comments </h5>

@@ -34,34 +34,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # Create comment
-  def comment_post
-    # new object from params
-    @comment = Comment.new(comment_params)
-    @comment.author = current_user
-    @comment.post = Post.find(params[:id])
-
-    if @comment.save
-      flash[:success] = 'Comment created successfully!'
-      redirect_to user_post_path
-    else
-      flash.now[:error] = 'Error creating comment!'
-      render :new
-    end
-  end
-
-  def like_post
-    @post = Post.find(params[:id])
-    # new object from params
-    @like = Like.new(author_id: current_user.id, post_id: @post.id)
-    if @like.save
-      flash[:success] = 'You liked the post!'
-      redirect_to user_post_path
-    else
-      flash.now[:error] = 'Error: Post could not be liked'
-    end
-  end
-
   private
 
   def post_params
