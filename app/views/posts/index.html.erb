@@ -24,5 +24,5 @@
         <% end %>
       </div>
       
-      <button> <%=link_to "Pagination", "#{post.id}" %> </button>
+      <button> <%=link_to "Pagination", user_post_path(@user.id, post.id) %> </button>
      <% end %>
