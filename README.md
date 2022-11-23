@@ -46,6 +46,12 @@ Any kind of browser.
    - Twitter:[@pamphilemkp](https://Twitter.com/PamphileMusonda)
    - LinkedIn:[@pamphilemkp](https://www.linkedin.com/in/pamphile-musonda)
 
+👤 **Basit Ali**
+
+- GitHub: [@githubhandle](https://github.com/basitali111)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/basit-ali-jobs/)
+- Twitter: [Twitter](https://twitter.com/BasitAl35031734)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -58,6 +64,14 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 - Inspiration
+
+## Useful links
+
+- [Ruby](https://ruby-doc.org/)
+- [Rails](https://guides.rubyonrails.org/)
+- [RSpec](https://rspec.info/)
+- [RubyGems](https://rubygems.org/)
+- [Bundler](https://bundler.io/)
 
 ## 📝 License
 

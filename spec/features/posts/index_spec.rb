@@ -8,9 +8,8 @@ RSpec.describe 'user posts index page', type: :feature do
     Post.create(title: 'fist post', text: 'tests', author_id: @user.id)
     Post.create(title: 'second post', text: 'tests', author_id: @user.id)
     Post.create(title: 'third post', text: 'tests', author_id: @user.id)
-    
+
     Comment.create(text: 'This is just for testing purpose', author_id: @user.id, post_id: @post1.id)
-    
 
     visit user_posts_path(@user.id)
   end
@@ -31,7 +30,6 @@ RSpec.describe 'user posts index page', type: :feature do
     expect(page).to have_content('fist post')
   end
 
-  
   it 'shows the post body' do
     expect(page).to have_content('test')
   end

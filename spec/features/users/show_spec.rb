@@ -9,8 +9,8 @@ RSpec.describe 'user show page', type: :feature do
     Post.create(title: 'second post', text: 'tests', author_id: @user.id)
     Post.create(title: 'third post', text: 'tests', author_id: @user.id)
     Post.create(title: 'fourth post', text: 'tests', author_id: @user.id)
-    
-     visit user_path(@user.id)
+
+    visit user_path(@user.id)
   end
 
   it 'shows the right name of the first user' do
@@ -29,7 +29,6 @@ RSpec.describe 'user show page', type: :feature do
     expect(page).to have_content('fourth post')
     expect(page).to have_content('third post')
     expect(page).to have_content('second post')
-
   end
 
   it 'shows the button to see all the posts' do
@@ -40,5 +39,4 @@ RSpec.describe 'user show page', type: :feature do
     click_link 'See all posts'
     expect(page).to have_current_path(user_posts_path(@user.id))
   end
-
 end

@@ -14,21 +14,23 @@
  *= require_self
  */
 
-
- .sign-up-container, .login-container {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
-
-.sign-up, .login {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 40vw;
+.sign-up-container,
+.login-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.field, .actions {
-    margin-top: 15px;
+.sign-up,
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40vw;
+}
+
+.field,
+.actions {
+  margin-top: 15px;
 }
