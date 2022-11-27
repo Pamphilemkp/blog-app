@@ -1,5 +1,5 @@
 class Api::V1::PostsController < ApplicationController
-  load_and_authorize_resource
+  before_action :authenticate_request
   def index
     @posts = Post.where(author_id: params[:user_id]).includes(:comments)
     render json: @posts

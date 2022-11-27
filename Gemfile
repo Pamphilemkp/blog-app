@@ -16,6 +16,8 @@ gem 'cancancan'
 gem 'devise'
 gem 'jwt'
 gem 'letter_opener'
+gem 'rack-cors'
+gem 'simple_command'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'

@@ -1,5 +1,6 @@
 class Api::V1::CommentsController < ApplicationController
-  load_and_authorize_resource
+  before_action :authenticate_request
+
   def index
     @post = Post.find(params[:post_id])
     @comment = @post.comments
