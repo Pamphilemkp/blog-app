@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Blog App
-> Blog app allowing the user to create an account, post comments, add likes and makes posts 
+> Blog app allowing the user to create an account, post comments, add likes and make posts 
 
 ## Built With
 
